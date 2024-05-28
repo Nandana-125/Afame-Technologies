@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sales.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sales Prediction</h1>
+        <form id="salesForm">
+            <label for="tvExpense">TV Advertising Expenditure:</label>
+            <input type="number" id="tvExpense" name="tvExpense" required>
+
+            <label for="radioExpense">Radio Advertising Expenditure:</label>
+            <input type="number" id="radioExpense" name="radioExpense" required>
+
+            <label for="newspaperExpense">Newspaper Advertising Expenditure:</label>
+            <input type="number" id="newspaperExpense" name="newspaperExpense" required>
+
+            <button type="submit">Predict Sales</button>
+        </form>
+        <div id="result-box">
+            <h2>Predicted Sales:</h2>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='sales.js') }}"></script>
+</body>
+</html>
